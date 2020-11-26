@@ -15,15 +15,18 @@ class Cell():
     def make_order(self, row): # принимающий экземпляр класса и количество ячеек в ряду. Данный метод позволяет организовать ячейки по рядам.
         self.row = row
         i = 0
-        j = self.cells
-        matrix = ''
+        j = self.cells / row
+        j2 = self.cells / j
         my_list = []
-        while i < row:
-            matrix = ('\n'.join([my_list]))
-            while j != 0:
-                my_list = (''.join(['*'])
-                j -= 1
+        i2 = 0
+        while i < j:
+
+            while i2 < j2:
+                my_list.append('*')
+                i2 += 1
+            print(str(''.join(my_list)))
             i += 1
+
 
 
 cells1 = Cell(15)
@@ -33,3 +36,4 @@ print(cells2 - cells1)
 print(cells2 * cells1)
 print(cells2 / cells1)
 cells1.make_order(5)
+
